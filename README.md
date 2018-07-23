@@ -22,5 +22,5 @@ Frontend-nanodegree-feedreader
 6. Test that ensures when a new feed is loaded by the loadFeed function that the content actually changes.
 
 ## *External dependencies*
- [jQuery](https://jquery.com/)
- [Jasmine](https://jasmine.github.io/)
+* [jQuery](https://jquery.com/)
+* [Jasmine](https://jasmine.github.io/)
