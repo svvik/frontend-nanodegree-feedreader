@@ -33,7 +33,7 @@ $(function () {
          */
         it('Feed URL not empty', function () {
             allFeeds.forEach(function (feed) {
-                expect(feed.url).not.toBeUndefined();
+                expect(feed.url).toBeDefined();
                 expect(feed.url.length).toBeGreaterThan(0);
             });
         });
@@ -44,7 +44,7 @@ $(function () {
          */
         it('Feed name not empty', function () {
             allFeeds.forEach(function (feed) {
-                expect(feed.name).not.toBeUndefined();
+                expect(feed.name).toBeDefined();
                 expect(feed.name.length).toBeGreaterThan(0);
             });
         });
@@ -60,7 +60,7 @@ $(function () {
          * and in addition verifies its behavior (ensure that menu position is out of visible area)
          */
         it('menu is hidden by default', function () {
-            expect($('.menu-hidden')).not.toBeUndefined();
+            expect($('body.menu-hidden').length).toBe(1);
             expect($('.slide-menu').position().left).toBeLessThan(0);
         });
 
@@ -69,10 +69,10 @@ $(function () {
          */
         it('menu is hidden/showing on click', function () {
             $('.menu-icon-link').click();
-            expect($('.menu-hidden').length).toBe(0);
+            expect($('body.menu-hidden').length).toBe(0);
 
             $('.menu-icon-link').click();
-            expect($('.menu-hidden').length).toBe(1);
+            expect($('body.menu-hidden').length).toBe(1);
         });
 
 
